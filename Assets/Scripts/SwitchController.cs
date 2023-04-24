@@ -15,6 +15,9 @@ public class SwitchController : MonoBehaviour
     public Material OffMaterial;
     public Material OnMaterial;
 
+    public AudioManager AudioManager;
+    public VFXManager VFXManager;
+
     private SwitchState _state;
     private Renderer _renderer;
 
@@ -31,7 +34,7 @@ public class SwitchController : MonoBehaviour
     {
         if (other == Ball)
         {
-            Toggle();
+            Toggle(other);
         }
     }
     
@@ -51,15 +54,23 @@ public class SwitchController : MonoBehaviour
         }
     }
 
-    private void Toggle()
+    private void Toggle(Collider other)
     {
         if (_state == SwitchState.On)
         {
             Set(false);
+
+            AudioManager.PlaySFXSwitchOff(other.transform.position);
+
+            VFXManager.PlayVFXSwitchOff(other.transform.position);
         }
         else
         {
             Set(true);
+
+            AudioManager.PlaySFXSwitchOn(other.transform.position);
+
+            VFXManager.PlayVFXSwitchOn(other.transform.position);
         }
     }
 

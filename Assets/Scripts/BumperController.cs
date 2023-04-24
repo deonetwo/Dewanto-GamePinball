@@ -8,6 +8,9 @@ public class BumperController : MonoBehaviour
     public float Multiplier;
     public Color BumperColor;
 
+    public AudioManager AudioManager;
+    public VFXManager VFXManager;
+
     private Renderer _renderer;
     private Animator _animator;
 
@@ -27,6 +30,10 @@ public class BumperController : MonoBehaviour
             ballRig.velocity *= Multiplier;
 
             _animator.SetTrigger("hit");
+
+            AudioManager.PlaySFX(collision.transform.position);
+
+            VFXManager.PlayVFX(collision.transform.position);
         }
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5687636337607138716}
   - component: {fileID: 5687636337607138719}
   - component: {fileID: 5687636337607138718}
+  - component: {fileID: 1806399052}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 67bb65b9aee8fa344920ed8c2c99d1e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +93,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5687636337607138913}
-  m_Material: {fileID: 13400000, guid: 34e4f8dfd3af0574d9e0a43604524b87, type: 2}
+  m_Material: {fileID: 13400000, guid: 28c25c155b05b664ebe2a1664ca6394a, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -108,9 +109,22 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &1806399052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687636337607138913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce7bbc767b75a14db79be1ce082c9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSpeed: 50
