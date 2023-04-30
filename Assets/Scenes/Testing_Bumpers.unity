@@ -432,6 +432,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BgmAudioSource: {fileID: 572073401}
   SfxAudioSource: {fileID: 9149374263482551618, guid: 5e21d7ae7cd70d34fb853fc4158d0159, type: 3}
+  SfxSwitchOnAudioSource: {fileID: 0}
+  SfxSwitchOffAudioSource: {fileID: 0}
 --- !u!4 &572073403
 Transform:
   m_ObjectHideFlags: 0
@@ -559,6 +561,10 @@ PrefabInstance:
       propertyPath: AudioManager
       value: 
       objectReference: {fileID: 572073402}
+    - target: {fileID: 1152121170, guid: 5a1058ee915db1f419272ca1e4ea15db, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2240483616510643945, guid: 5a1058ee915db1f419272ca1e4ea15db, type: 3}
       propertyPath: m_Name
       value: Bumper
